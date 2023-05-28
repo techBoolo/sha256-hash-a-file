@@ -13,10 +13,12 @@ let filename
 let fileFullPath
 
 // take the arguments
-const args = process.argv.slice(2)
+// const args = process.argv.slice(2)
+const [, jsFile, ...args ] = process.argv
 
 // 1. check for provided file argument
 if(args.length === 0) {
+  console.log(`Usage: node ${path.basename(jsFile, '.js')} file_name`)
   throw new ArgumentError('Argument for file must be provided')
 }
 

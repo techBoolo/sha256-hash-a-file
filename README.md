@@ -6,16 +6,21 @@ save the file hash result and its file name in a new file with an extension '.ha
 
 ## node modules used
 
+- node:process
+
+  - get the current javascript file being executed, to show Usage of the module
+  - get user input file name argument 
+
 - node:fs
   
-  - to check if the file exists in the file system
+  - check if the file exists in the file system
   - read the file content to hash
   - write the resulting hash and the file name in a new file
 
 - node:path
   
   - get part of filename and construct the destination file name
-  - verify and resolve if file is absolut path
+  - verify if file is absolute path, if not resolve to absolute path
 
 - node:crypto
 
@@ -23,8 +28,11 @@ save the file hash result and its file name in a new file with an extension '.ha
 
 ## Usage
 
-`node hashFile file_name`
+- run
+
+  `node hashFile file_name`
 
 - result
-  the original file_name with an extension '.hash' in the same directory as the
+
+  the original file name with an extension '.hash' in the same directory as the
 original file name
